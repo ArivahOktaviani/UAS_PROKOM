@@ -32,10 +32,8 @@ left_col, mid_col, right_col = st.columns(3)
 st.sidebar.subheader("Pengaturan konfigurasi tampilan")
 list_negara = y['name'].tolist()
 negara = st.sidebar.selectbox('Negara : ', list_negara) 
-
 kode = y[y['name']==negara]['alpha-3'].tolist()[0]
-st.write('Kode negara : ',kode)
-st.write('Negara : ',negara)
+st.sidebar.write('Kode negara : ',kode)
 x_ = df_[df_['kode_negara']==kode]['tahun'].tolist()
 y_ = df_[df_['kode_negara']==kode]['produksi'].tolist()
 
